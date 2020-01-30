@@ -1,0 +1,6 @@
+server.port=8081
+
+security.oauth2.client.grant-type=password
+security.oauth2.client.client-id=clientid
+security.oauth2.client.client-secret=secret
+security.oauth2.client.access-token-uri=http://localhost:8080/oauth/token

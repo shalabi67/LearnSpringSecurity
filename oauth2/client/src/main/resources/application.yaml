@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+spring:
+  security:
+    oauth2:
+      client:
+        provider:
+          service-auth:
+            authorization-uri: http://hello:8080/oauth/authorize
+            token-uri: http://localhost:8080/oauth/token
+        registration:
+          hello-client:
+            provider: service-auth
+            client-id: clientid
+            client-secret: secret
+            authorization-grant-type: client_credentials
+            redirect-uri: '{baseUrl}/login/oauth2/code/{registrationId}'
+            client name: Hello client
+
+logging:
+  level:
+    root: DEBUG
